@@ -32,6 +32,21 @@ body {
     font-size: 15px;
 }
 
+.submit {
+    width: 50%;
+    text-align: center;
+}
+
+.submit-btn {
+    width: 4rem;
+    height: auto;
+    color: white;
+    background-color: blue;
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+}
+
 table, th, td {
     border: 1px solid lightgrey;
     border-collapse: collapse;
@@ -79,4 +94,12 @@ thead {
     border: none;
     border-radius: 4px;
     text-decoration: none;
+}
+
+.text-input-field {
+    width: 50%; padding: 8px;
+}
+
+textarea {
+    font-family: Arial, Helvetica, sans-serif;
 }

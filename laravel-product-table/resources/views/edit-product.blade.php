@@ -17,17 +17,20 @@
 
     <form action="">
         <p>Name:</p>
-        <input type="text" placeholder="Name" style="width: 50%;">
+        <input type="text" placeholder="Name" class="text-input-field">
         <p>Price (RM):</p>
-        <input type="text" placeholder="99.90" style="width: 50%;">
+        <input type="text" placeholder="99.90" class="text-input-field">
         <p>Detail:</p>
-        <input type="text" placeholder="Detail" style="width: 50%;">
+        <textarea  placeholder="Detail" rows="5" cols="50" class="text-input-field"></textarea>
         <p>Publish:</p>
-        <input type="radio" name="publish" id="yes" value="Yes"><label for="yes">Yes</label></br>
-        <input type="radio" name="publish" id="no" value="No"><label for="no">No</label>
+        <input type="radio" name="publish" id="yes" value="Yes"><label for="yes"> Yes</label></br>
+        <input type="radio" name="publish" id="no" value="No"><label for="no"> No</label>
         </br>
         </br>
-        <input type="submit" value="Submit" style="width: 4rem; height: auto; color: white; background-color: blue; padding: 8px; border: none; border-radius: 4px; justify-content: center; align-items: center;">
+        <div class="submit">
+            <input type="submit" value="Submit" class="submit-btn">
+        </div>
+        
     </form>
 
 </body>
