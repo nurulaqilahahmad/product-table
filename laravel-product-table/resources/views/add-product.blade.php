@@ -10,7 +10,7 @@
     <div class="title-section" style="width: 50%; display: flex; flex-direction: row; justify-content: space-between; align-items: center;">
         <h1>Add New Product</h1>
         <div>
-            <button style="height: auto; color: white; background-color: blue; padding: 8px; border: none; border-radius: 4px;">Back</button>
+            <button style="width: 4rem; height: auto; color: white; background-color: blue; padding: 8px; border: none; border-radius: 4px;">Back</button>
         </div>
     </div>
 
@@ -20,10 +20,13 @@
         <p>Price (RM):</p>
         <input type="text" placeholder="99.90" style="width: 50%;">
         <p>Detail:</p>
-        <input type="text" placeholder="Detail" style="width: 50%;">
+        <input type="text"  placeholder="Detail" style="width: 50%;">
         <p>Publish:</p>
-        <input type="radio" value="Yes">Yes</input>
-        <input type="radio" value="No">No</input>
+        <input type="radio" value="Yes">
+        <input type="radio" value="No">
+        </br>
+        </br>
+        <input type="submit" value="Submit" style="width: 4rem; height: auto; color: white; background-color: blue; padding: 8px; border: none; border-radius: 4px; align-items: center;">
     </form>
 
 </body>
