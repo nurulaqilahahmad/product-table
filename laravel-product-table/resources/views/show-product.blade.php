@@ -3,14 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url('CSS/style.css') }}">
     <title>Show | Product Table</title>
 </head>
-<body style="font-family: Arial, Helvetica, sans-serif;">
+<body>
 
-    <div class="title-section" style="width: 50%; display: flex; flex-direction: row; justify-content: space-between; align-items: center;">
+    <div class="title-section">
         <h1>Show Product</h1>
         <div>
-            <button style="height: auto; color: white; background-color: blue; padding: 8px; border: none; border-radius: 4px;">Back</button>
+            <a href="/" class="back-btn">Back</a>
         </div>
     </div>
 

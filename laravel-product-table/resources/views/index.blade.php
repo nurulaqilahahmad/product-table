@@ -4,66 +4,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="{{ asset('css/style.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url('CSS/style.css') }}">
     <title>Product Table</title>
 </head>
 
-<body style="font-family: Arial, Helvetica, sans-serif;">
+<body>
 
-    <div class="title-section" style="width: 50%; display: flex; flex-direction: row; justify-content: space-between; align-items: center;">
+    <div class="title-section">
         <h1>Laravel</h1>
         <div>
-            <button style="height: auto; color: white; background-color: green; padding: 8px; border: none; border-radius: 4px;">Create New Product</button>
+            <a href="add-product" class="create-btn">Create New Product</a>
         </div>
     </div>
 
 
-    <table class="product-table" style="width: 50%; border: 1px solid black;">
-        <thead style="border: 1px solid black; text-align: justify;">
+    <table class="product-table">
+        <thead>
             <tr>
-                <th style="padding: 8px;">No</th>
-                <th style="padding: 8px;">Name</th>
-                <th style="padding: 8px;">Price (RM)</th>
-                <th style="padding: 8px;">Details</th>
-                <th style="padding: 8px;">Publish</th>
-                <th style="padding: 8px;">Action</th>
+                <th>No</th>
+                <th>Name</th>
+                <th>Price (RM)</th>
+                <th>Details</th>
+                <th>Publish</th>
+                <th>Action</th>
             </tr>
         </thead>
-        <tbody style="border: 1px solid black;">
+        <tbody>
             <tr>
-                <td style="padding: 8px;">1</td>
-                <td style="padding: 8px;">C</td>
-                <td style="padding: 8px;">56.89</td>
-                <td style="padding: 8px;">Detail of product c</td>
-                <td style="padding: 8px;">Yes</td>
-                <td style="padding: 8px;">
-                    <button style="width: 4rem; height: auto; color: white; background-color: lightblue; padding: 8px; border: none; border-radius: 4px;">Show</button>
-                    <button style="width: 4rem; height: auto; color: white; background-color: blue; padding: 8px; border: none; border-radius: 4px;">Edit</button>
-                    <button style="width: 4rem; height: auto; color: white; background-color: red; padding: 8px; border: none; border-radius: 4px;">Delete</button>
+                <td>1</td>
+                <td>C</td>
+                <td>56.89</td>
+                <td>Detail of product c</td>
+                <td>Yes</td>
+                <td>
+                    <a href="show-product" class="show-btn">Show</a>
+                    <a href="edit-product" class="edit-btn">Edit</a>
+                    <a href="#" class="delete-btn">Delete</a>
                 </td>
             </tr>
             <tr>
-                <td style="padding: 8px;">2</td>
-                <td style="padding: 8px;">B</td>
-                <td style="padding: 8px;">23.33</td>
-                <td style="padding: 8px;">B detail</td>
-                <td style="padding: 8px;">Yes</td>
-                <td style="padding: 8px;">
-                    <button style="width: 4rem; height: auto; color: white; background-color: lightblue; padding: 8px; border: none; border-radius: 4px;">Show</button>
-                    <button style="width: 4rem; height: auto; color: white; background-color: blue; padding: 8px; border: none; border-radius: 4px;">Edit</button>
-                    <button style="width: 4rem; height: auto; color: white; background-color: red; padding: 8px; border: none; border-radius: 4px;">Delete</button>
+                <td>2</td>
+                <td>B</td>
+                <td>23.33</td>
+                <td>B detail</td>
+                <td>Yes</td>
+                <td>
+                    <a href="show-product" class="show-btn">Show</a>
+                    <a href="edit-product" class="edit-btn">Edit</a>
+                    <a href="#" class="delete-btn">Delete</a>
                 </td>
             </tr>
             <tr>
-                <td style="padding: 8px;">3</td>
-                <td style="padding: 8px;">A</td>
-                <td style="padding: 8px;">60.56</td>
-                <td style="padding: 8px;">A detail...</td>
-                <td style="padding: 8px;">No</td>
-                <td style="padding: 8px;">
-                    <button style="width: 4rem; height: auto; color: white; background-color: lightblue; padding: 8px; border: none; border-radius: 4px;">Show</button>
-                    <button style="width: 4rem; height: auto; color: white; background-color: blue; padding: 8px; border: none; border-radius: 4px;">Edit</button>
-                    <button style="width: 4rem; height: auto; color: white; background-color: red; padding: 8px; border: none; border-radius: 4px;">Delete</button>
+                <td>3</td>
+                <td>A</td>
+                <td>60.56</td>
+                <td>A detail...</td>
+                <td>No</td>
+                <td>
+                    <a href="show-product" class="show-btn">Show</a>
+                    <a href="edit-product" class="edit-btn">Edit</a>
+                    <a href="#" class="delete-btn">Delete</a>
                 </td>
             </tr>
         </tbody>

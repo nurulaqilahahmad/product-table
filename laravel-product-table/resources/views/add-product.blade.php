@@ -3,14 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url('CSS/style.css') }}">
     <title>Add New | Product Table</title>
 </head>
-<body style="font-family: Arial, Helvetica, sans-serif;">
+<body>
     
-    <div class="title-section" style="width: 50%; display: flex; flex-direction: row; justify-content: space-between; align-items: center;">
+    <div class="title-section">
         <h1>Add New Product</h1>
         <div>
-            <button style="width: 4rem; height: auto; color: white; background-color: blue; padding: 8px; border: none; border-radius: 4px;">Back</button>
+            <a href="/" class="back-btn">Back</a>
         </div>
     </div>
 
@@ -22,11 +23,11 @@
         <p>Detail:</p>
         <input type="text"  placeholder="Detail" style="width: 50%;">
         <p>Publish:</p>
-        <input type="radio" value="Yes">
-        <input type="radio" value="No">
+        <input type="radio" name="publish" id="yes" value="Yes"><label for="yes">Yes</label></br>
+        <input type="radio" name="publish" id="no" value="No"><label for="no">No</label>
         </br>
         </br>
-        <input type="submit" value="Submit" style="width: 4rem; height: auto; color: white; background-color: blue; padding: 8px; border: none; border-radius: 4px; align-items: center;">
+        <input type="submit" value="Submit" style="width: 4rem; height: auto; color: white; background-color: blue; padding: 8px; border: none; border-radius: 4px; justify-content: center; align-items: center;">
     </form>
 
 </body>
