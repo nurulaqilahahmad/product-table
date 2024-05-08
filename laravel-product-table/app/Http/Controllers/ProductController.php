@@ -23,4 +23,8 @@ class ProductController extends Controller
         //     return back()->with('fail', 'Something went wrong. Try again.');
         // }
     }
+
+    public function showProduct () {
+        return view('show-product');
+    }
 }
