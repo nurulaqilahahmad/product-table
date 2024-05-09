@@ -32,6 +32,8 @@ Route::get('add-product', function () {
 
 Route::get('delete-product/{productID}', [ProductController::class, 'deleteProduct']);
 
-Route::get('edit-product/{productID}', [ProductController::class, 'editProduct']);
+// Route::get('showEditProduct', [ProductController::class, 'showEditProduct']);
+Route::get('edit-product/{productID}', [ProductController::class, 'showEditProduct']);
+Route::post('editProduct', [ProductController::class, 'editProduct']);
 
 Route::get('search', [ProductController::class, 'search']);
