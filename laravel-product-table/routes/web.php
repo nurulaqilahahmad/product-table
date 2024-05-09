@@ -20,15 +20,18 @@ Route::get('/', function () {
     return view('index', compact('product'));
 });
 
-Route::get('show-product/{productID}', [ProductController::class, 'showProduct'])->name('show-product/{productID}');
+Route::post('createProduct', [ProductController::class, 'createProduct']);
+// Route::post('createProduct', [ProductController::class, 'createProduct'])->name('index');
+
+Route::get('show-product/{productID}', [ProductController::class, 'showProduct']);
+// Route::get('show-product/{productID}', [ProductController::class, 'showProduct'])->name('show-product/{productID}');
 
 Route::get('add-product', function () {
     return view('add-product');
 });
 
-Route::get('edit-product', function () {
-    return view('edit-product');
-});
+Route::get('delete-product/{productID}', [ProductController::class, 'deleteProduct']);
 
-Route::post('createProduct', [ProductController::class, 'createProduct']);
-// Route::get('viewProductTable', [ProductController::class, 'viewProductTable'])->name('viewProductTable');
+Route::get('edit-product/{productID}', [ProductController::class, 'editProduct']);
+
+Route::get('search', [ProductController::class, 'search']);

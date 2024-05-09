@@ -17,6 +17,13 @@
         </div>
     </div>
 
+    <div class="search-section">
+        <form action="{{url('search')}}" method="get">
+            <input type="text" name="search" id="search" placeholder="Enter keyword..." class="search-input-field">
+            <input type="submit" value="Search" class="search-btn">
+        </form>
+    </div>
+
 
     <table class="product-table">
         <thead>
@@ -39,8 +46,8 @@
                 <td>{{$product->productPublish}}</td>
                 <td>
                     <a href="show-product/{{$product->productID}}" class="show-btn">Show</a>
-                    <a href="edit-product" class="edit-btn">Edit</a>
-                    <a href="#" class="delete-btn">Delete</a>
+                    <a href="edit-product/{{$product->productID}}" class="edit-btn">Edit</a>
+                    <a href="delete-product/{{$product->productID}}" class="delete-btn">Delete</a>
                 </td>
             </tr>
             @endforeach

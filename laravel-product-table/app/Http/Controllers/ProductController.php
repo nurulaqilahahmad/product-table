@@ -21,7 +21,6 @@ class ProductController extends Controller
             $product = array();
             $product = DB::table('products')->get();
             return view('index', compact('product'));
-            // return redirect('/');
         }
         else{
             return back()->with('fail', 'Something went wrong. Try again.');
@@ -31,5 +30,28 @@ class ProductController extends Controller
     public function showProduct ($productID) {
         $product = DB::table('products')->where('productID', '=', $productID)->get();
         return view('show-product', compact('product'));
+    }
+
+    public function deleteProduct ($productID) {
+        $product = DB::table('products')->where('productID', '=', $productID)->delete();
+        $product = DB::table('products')->get();
+        return view('index', compact('product'));
+    }
+
+    public function editProduct (Request $request) {
+        $product = Product::where('productID', '=', $request->productID);
+        $product->productName = $request->productName;
+        $product->productPrice = $request->productPrice;
+        $product->productDetails = $request->productDetails;
+        $product->productPublish = $request->productPublish;
+        $product->update();
+        return redirect('index', compact('product'));
+    }
+
+    public function search (Request $request) {
+        $search = $request->search;
+
+        $product = Product::where('productName', 'Like', '%'.$search.'%')->get();
+        return view('index', compact('product'));
     }
 }
