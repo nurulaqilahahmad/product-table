@@ -3,7 +3,7 @@ body {
 }
 
 .title-section {
-    width: 50%;
+    width: 80%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -58,7 +58,7 @@ thead {
 }
 
 .product-table {
-    width: 50%;
+    width: 80%;
 }
 
 .show-btn {

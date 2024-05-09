@@ -9,22 +9,27 @@ use Illuminate\Support\Facades\DB;
 class ProductController extends Controller
 {
     //Create New Product
-    public function productCreate (Request $request) {
+    public function createProduct (Request $request) {
         $product = new Product();
-        $product->productName = request('productName');
-        $product->productPrice = request('productPrice');
-        $product->productDetails = request('productDetails');
-        $product->productPublish = request('productPublish');
-        // $created = $product->save();
-        // if($created){
-        //     return redirect('member_SignIn')->with('success', 'You have successfully registered. You can now sign in.');
-        // }
-        // else{
-        //     return back()->with('fail', 'Something went wrong. Try again.');
-        // }
+        $product->productName = $request->productName;
+        $product->productPrice = $request->productPrice;
+        $product->productDetails = $request->productDetails;
+        $product->productPublish = $request->productPublish;
+        $created = $product->save();
+        if($created){
+            // return redirect('/')->with('success', 'You have successfully registered. You can now sign in.');
+            $product = array();
+            $product = DB::table('products')->get();
+            return view('index', compact('product'));
+            // return redirect('/');
+        }
+        else{
+            return back()->with('fail', 'Something went wrong. Try again.');
+        }
     }
 
-    public function showProduct () {
-        return view('show-product');
+    public function showProduct ($productID) {
+        $product = DB::table('products')->where('productID', '=', $productID)->get();
+        return view('show-product', compact('product'));
     }
 }

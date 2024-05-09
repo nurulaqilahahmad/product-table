@@ -30,42 +30,20 @@
             </tr>
         </thead>
         <tbody>
+            @foreach ($product as $product)
             <tr>
-                <td>1</td>
-                <td>C</td>
-                <td>56.89</td>
-                <td>Detail of product c</td>
-                <td>Yes</td>
+                <td></td>
+                <td>{{$product->productName}}</td>
+                <td>{{$product->productPrice}}</td>
+                <td>{{$product->productDetails}}</td>
+                <td>{{$product->productPublish}}</td>
                 <td>
-                    <a href="show-product" class="show-btn">Show</a>
+                    <a href="show-product/{{$product->productID}}" class="show-btn">Show</a>
                     <a href="edit-product" class="edit-btn">Edit</a>
                     <a href="#" class="delete-btn">Delete</a>
                 </td>
             </tr>
-            <tr>
-                <td>2</td>
-                <td>B</td>
-                <td>23.33</td>
-                <td>B detail</td>
-                <td>Yes</td>
-                <td>
-                    <a href="show-product" class="show-btn">Show</a>
-                    <a href="edit-product" class="edit-btn">Edit</a>
-                    <a href="#" class="delete-btn">Delete</a>
-                </td>
-            </tr>
-            <tr>
-                <td>3</td>
-                <td>A</td>
-                <td>60.56</td>
-                <td>A detail...</td>
-                <td>No</td>
-                <td>
-                    <a href="show-product" class="show-btn">Show</a>
-                    <a href="edit-product" class="edit-btn">Edit</a>
-                    <a href="#" class="delete-btn">Delete</a>
-                </td>
-            </tr>
+            @endforeach
         </tbody>
     </table>
 

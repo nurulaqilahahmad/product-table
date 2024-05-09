@@ -15,16 +15,17 @@
         </div>
     </div>
 
-    <form action="">
+    <form method="post" action="/createProduct">
+        @csrf
         <p>Name:</p>
-        <input type="text" placeholder="Name" class="text-input-field">
+        <input type="text" placeholder="Name" class="text-input-field" id="productName" name="productName">
         <p>Price (RM):</p>
-        <input type="text" placeholder="99.90" class="text-input-field">
+        <input type="text" placeholder="99.90" class="text-input-field" id="productPrice" name="productPrice">
         <p>Detail:</p>
-        <textarea  placeholder="Detail" rows="5" cols="50" class="text-input-field"></textarea>
+        <textarea  placeholder="Detail" rows="5" cols="50" class="text-input-field" id="productDetails" name="productDetails"></textarea>
         <p>Publish:</p>
-        <input type="radio" name="publish" id="yes" value="Yes"><label for="yes"> Yes</label></br>
-        <input type="radio" name="publish" id="no" value="No"><label for="no"> No</label>
+        <input type="radio" name="productPublish" id="productPublish" value="Yes"><label for="yes"> Yes</label></br>
+        <input type="radio" name="productPublish" id="productPublish" value="No"><label for="no"> No</label>
         </br>
         </br>
         <div class="submit">

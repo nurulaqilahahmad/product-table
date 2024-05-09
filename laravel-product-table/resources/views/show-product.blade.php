@@ -14,13 +14,14 @@
             <a href="/" class="back-btn">Back</a>
         </div>
     </div>
-
+    @foreach ($product as $product)
     <div>
-        <p><b>Name:</b> C</p>
-        <p><b>Price (RM):</b> RM 56.89</p>
-        <p><b>Details:</b> Detail of product c</p>
-        <p><b>Publish:</b> Yes</p>
+        <p><b>Name:</b> {{$product->productName}}</p>
+        <p><b>Price (RM):</b> RM {{$product->productPrice}}</p>
+        <p><b>Details:</b> {{$product->productDetails}}</p>
+        <p><b>Publish:</b> {{$product->productPublish}}</p>
     </div>
+    @endforeach
 
 </body>
 </html>
