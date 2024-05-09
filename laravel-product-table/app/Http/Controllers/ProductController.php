@@ -34,9 +34,7 @@ class ProductController extends Controller
 
     public function deleteProduct ($productID) {
         DB::table('products')->where('productID', '=', $productID)->delete();
-        // $product = DB::table('products')->get();
         return redirect('/');
-        // return view('index', compact('product'));
     }
 
     public function showEditProduct ($productID) {
@@ -45,7 +43,7 @@ class ProductController extends Controller
     }
 
     public function editProduct (Request $request) {
-        DB::table('products')->where('productID', '=', $request->productID)->update([
+        DB::table('products')->where('productID', $request->productID)->update([
             'productName' => $request->productName,
             'productPrice' => $request->productPrice,
             'productDetails' => $request->productDetails,
