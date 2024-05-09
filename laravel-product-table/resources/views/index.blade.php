@@ -39,7 +39,7 @@
         <tbody>
             @foreach ($product as $product)
             <tr>
-                <td></td>
+                <td>{{ $loop->iteration }}</td>
                 <td>{{$product->productName}}</td>
                 <td>{{$product->productPrice}}</td>
                 <td>{{$product->productDetails}}</td>
